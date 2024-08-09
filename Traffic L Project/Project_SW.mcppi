@@ -33,10 +33,10 @@ Count=0
 [OTHER_FILES]
 Count=0
 [SEARCH_PATH]
-Count=3
+Count=4
 Path0=C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\
 Path1=C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\
-Path2=F:\College\Communication_Year_2\Traning\Embeded\Traffic L Project\
+Path2=F:\College\Communication_Year_2\Traning\Embeded\project_\Traffic L Project\
 [HEADER_PATH]
 Count=0
 [HEADERS]

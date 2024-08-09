@@ -44,6 +44,7 @@ void main() {
 
      while(1){
         if (AUTO_MANU_SW == 1) {
+            portC = 15;
             Clear();
             can_ = 1;
             Auto();
@@ -57,6 +58,10 @@ void manual(){
            can_ = 0;
            change = MANUAL_SW;
            if(MANUAL_SW == 1){
+               portC.B0 = 0;
+               portC.B1 = 0;
+               portC.B2 = 1;
+               portC.B3 = 1;
                SOUTH_YELLOW = 0;
                SOUTH_GREEN = 0;
                WEST_RED = 0;
@@ -71,6 +76,10 @@ void manual(){
                WEST_YELLOW = 0;
                WEST_GREEN = 1;
            }else{
+               portC.B0 = 1;
+               portC.B1 = 1;
+               portC.B2 = 0;
+               portC.B3 = 0;
                WEST_GREEN = 0;
                WEST_YELLOW = 0;
                SOUTH_RED = 0;

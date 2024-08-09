@@ -1,5 +1,5 @@
-#line 1 "F:/College/Communication_Year_2/Traning/Embeded/Traffic L Project/Project_SW.c"
-#line 20 "F:/College/Communication_Year_2/Traning/Embeded/Traffic L Project/Project_SW.c"
+#line 1 "F:/College/Communication_Year_2/Traning/Embeded/project_/Traffic L Project/Project_SW.c"
+#line 20 "F:/College/Communication_Year_2/Traning/Embeded/project_/Traffic L Project/Project_SW.c"
 void Auto();
 void manual();
 char can_ = 1;
@@ -27,6 +27,7 @@ void main() {
 
  while(1){
  if ( PORTC.B4  == 1) {
+ portC = 15;
  Clear();
  can_ = 1;
  Auto();
@@ -40,6 +41,10 @@ void manual(){
  can_ = 0;
  change =  PORTC.B5 ;
  if( PORTC.B5  == 1){
+ portC.B0 = 0;
+ portC.B1 = 0;
+ portC.B2 = 1;
+ portC.B3 = 1;
   PORTD.b1  = 0;
   PORTD.b2  = 0;
   PORTD.b3  = 0;
@@ -54,6 +59,10 @@ void manual(){
   PORTD.b4  = 0;
   PORTD.b5  = 1;
  }else{
+ portC.B0 = 1;
+ portC.B1 = 1;
+ portC.B2 = 0;
+ portC.B3 = 0;
   PORTD.b5  = 0;
   PORTD.b4  = 0;
   PORTD.b0  = 0;
